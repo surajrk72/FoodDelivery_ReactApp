@@ -26,7 +26,7 @@ function Search(){
     
     const onCityChange = (event) => {
         let stateId = event.target.value;
-        axios.get(`${REACT_APP_RESTORAUNT_URL}stateId=${stateId}`)
+        axios.get(`http://3.17.216.66:4000/restaurant?stateId=${stateId}`)
         .then(res => {
             setResto(res.data);
             console.log(resto);
@@ -45,7 +45,7 @@ function Search(){
     }
 
     useEffect(() => {
-        axios.get(`${REACT_APP_BASE_URL}location`)
+        axios.get(`http://3.17.216.66:4000/location`)
         .then(res=>setLocation(res.data));
         //  console.log(location);
     },[]);
