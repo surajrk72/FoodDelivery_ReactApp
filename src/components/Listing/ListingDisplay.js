@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Listing.css";
 
 const ListingDisplay = (props) => {
 
@@ -25,14 +26,14 @@ const ListingDisplay = (props) => {
                                 <div className="labelDiv">
                                     {
                                         res.mealTypes.map(item=>
-                                            <span key={item.mealtype_id} className="label label-primary " style={{marginLeft:'3px'}}>{item.mealtype_name}</span>
+                                            <span key={item.mealtype_id} className="badge badge-success " style={{marginLeft:'3px'}}>{item.mealtype_name}</span>
                                             )
                                     }
                                 </div>
                                 <div className="labelDiv">
                                     {
                                         res.cuisines.map(item=>
-                                            <span key={item.cuisine_id} className="label label-warning " style={{marginLeft:'3px'}}>{item.cuisine_name}</span>
+                                            <span key={item.cuisine_id} className="badge badge-danger" style={{marginLeft:'3px'}}>{item.cuisine_name}</span>
                                             )
                                     }
                                 </div>

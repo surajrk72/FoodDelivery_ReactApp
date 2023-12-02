@@ -26,7 +26,6 @@ function Search(){
     
     const onCityChange = (event) => {
         let stateId = event.target.value;
-        alert(stateId);
         axios.get(`${REACT_APP_RESTORAUNT_URL}stateId=${stateId}`)
         .then(res => {
             setResto(res.data);
@@ -53,7 +52,7 @@ function Search(){
 
     return(
         <>
-            <div id="search">
+            <div id="search" className="container-fluid">
                     <div id="black">
                         <div id="logo">
                              <div id="bikeImage">

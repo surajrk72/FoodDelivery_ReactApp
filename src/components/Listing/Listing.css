@@ -72,3 +72,16 @@
     margin-top:5%;
     font-size:25px;
 }
+
+#shade{
+    width: 200px;
+    height: 600px;
+    background-color: rgb(213 213 213 / 63%);
+}
+
+.form-label{
+   background-color: #3e3a3ad6;
+   color: white;
+   width: 100%;
+   text-align: center;
+}

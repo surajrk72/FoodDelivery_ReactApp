@@ -443,3 +443,8 @@ https://github.com/Aakashdeveloper/react-interview-questions
 npm i -g json-server
 
 json-server --watch orders.json --port 8000
+
+json-server --watch register.json --port 8001
+
+json-server --watch users.json --port 8002
+
