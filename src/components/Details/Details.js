@@ -6,7 +6,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import MenuDetails from './MenuDetails';
 import Header from "../Header";
-const { REACT_APP_BASE_URL } = process.env;
+// const { REACT_APP_BASE_URL } = process.env;
 
 
 class Details extends Component {
@@ -195,8 +195,8 @@ class Details extends Component {
 
         let id = this.props.location.search.split('=')[1];
         sessionStorage.setItem("restoId", id);
-        let fetch = await axios.get(`${REACT_APP_BASE_URL}details/${id}`);
-        let menu = await axios.get(`${REACT_APP_BASE_URL}menu/${id}`);
+        let fetch = await axios.get(`http://3.17.216.66:4000/details/${id}`);
+        let menu = await axios.get(`http://3.17.216.66:4000/menu/${id}`);
         this.setState({ details:fetch.data[0] });
      
         this.setState({ menuDetails: menu.data });

@@ -2,7 +2,7 @@ import { Component, useEffect, useState } from "react";
 import React from "react";
 import './Search.css';
 import axios from "axios";
-const {REACT_APP_BASE_URL,REACT_APP_RESTORAUNT_URL} = process.env;
+// const {REACT_APP_BASE_URL,REACT_APP_RESTORAUNT_URL} = process.env;
 const Cityurl = 'http://3.17.216.66:4000';
 const RestoUrl = 'http://3.17.216.66:4000/restaurant?stateId=';
 

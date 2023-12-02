@@ -9,7 +9,7 @@ import Header from "../Header";
 
 
 // const base_url = 'http://3.17.216.66:4000/';
-const { REACT_APP_BASE_URL, REACT_APP_RESTORAUNT_URL } = process.env;
+// const { REACT_APP_BASE_URL, REACT_APP_RESTORAUNT_URL } = process.env;
 
 class Listing extends Component {
 
@@ -69,7 +69,7 @@ class Listing extends Component {
     componentDidMount() {
         let mealId = this.props.match.params.mealId;
         sessionStorage.setItem('mealId', mealId);
-        axios.get(`${REACT_APP_RESTORAUNT_URL}mealtype_id=${mealId}`)
+        axios.get(`http://3.17.216.66:4000/restaurant?mealtype_id=${mealId}`)
             .then(res => {
 
                 this.setState({ restorauntsList: (res.data) })

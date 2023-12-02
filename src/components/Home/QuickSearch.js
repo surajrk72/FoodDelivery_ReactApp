@@ -3,7 +3,7 @@ import React from "react";
 import './QuickSearch.css';
 import QuickDisplay from "./QuickDisplay";
 import axios from "axios";
-const {REACT_APP_BASE_URL} = process.env;
+// const {REACT_APP_BASE_URL} = process.env;
 // const base_url = 'http://3.17.216.66:4000/';
 
 
@@ -12,7 +12,7 @@ const QuickSearch = () => {
     const[mealType,setMealType] = useState([]);
 
     useEffect(() => {
-        fetch(`${REACT_APP_BASE_URL}quicksearch`,{method:"GET"})
+        fetch(`http://3.17.216.66:4000/quicksearch`,{method:"GET"})
         .then(data => data.json())
         .then(res => {
             console.log(res);
